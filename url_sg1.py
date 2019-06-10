@@ -6,6 +6,10 @@ import xlsxwriter
 import datetime
 import time
 
+import os
+
+if not os.path.isdir("sg"):
+    os.makedirs("sg")
 
 
 sg   = "https://bbs.sgamer.com/forum-283-1.html"
@@ -16,7 +20,7 @@ all_data = soup.select("tbody")
 #初始化
 startTime1 = 'SG-' + str(time.strftime("%Y-%m-%d %H-%M-%S", time.localtime()))
 # startTime1 = 'asd'
-workbook = xlsxwriter.Workbook('D:/'+ startTime1 +'.xlsx')  #创建一个Excel文件
+workbook = xlsxwriter.Workbook('E:/pypro/ezCrawler/sg/'+ startTime1 +'.xlsx')  #创建一个Excel文件
 worksheet = workbook.add_worksheet()               #创建一个sheet
 headings = ['标题','作者','最后回复','回复数量','浏览量']     #设置表头
 
