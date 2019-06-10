@@ -20,7 +20,7 @@ for i in range(1, 10):
     all_data = soup.select("tbody")
 
     # 初始化
-    startTime1 = 'SG-' + str(time.strftime("%Y-%m-%d %H-%M-%S", time.localtime()))
+    startTime1 = 'SG-'+ str(i) +'页-' + str(time.strftime("%Y-%m-%d %H-%M-%S", time.localtime()))
     # startTime1 = 'asd'
     workbook = xlsxwriter.Workbook('E:/pypro/ezCrawler/sg/' + startTime1 + '.xlsx')  # 创建一个Excel文件
     worksheet = workbook.add_worksheet()  # 创建一个sheet
