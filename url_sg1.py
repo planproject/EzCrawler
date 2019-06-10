@@ -11,8 +11,9 @@ import os
 if not os.path.isdir("sg"):
     os.makedirs("sg")
 
+number = input("Pls input page-number：")
 
-for i in range(1, 10):
+for i in range(1, int(number) + 1):
     sg = "https://bbs.sgamer.com/forum-283-"+ str(i) +".html"
 
     resp = urlopen(sg).read().decode()
