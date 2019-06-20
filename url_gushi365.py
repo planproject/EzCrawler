@@ -51,3 +51,4 @@ for i in range(2, int(number) + 1):
     worksheet.write_column('B2', data_time)
     worksheet.write_column('C2', data_read)
     workbook.close()
+    print("Crawl Success!")
