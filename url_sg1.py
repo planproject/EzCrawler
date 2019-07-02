@@ -5,7 +5,6 @@ import re
 import xlsxwriter
 import datetime
 import time
-
 import os
 
 if not os.path.isdir("sg"):
